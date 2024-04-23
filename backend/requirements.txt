@@ -1,0 +1,5 @@
+cmake
+screen
+django
+django-admin
+djangorestframework
