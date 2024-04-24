@@ -3,3 +3,6 @@ screen
 django
 django-admin
 djangorestframework
+numpy 
+pandas 
+scikit-learn
