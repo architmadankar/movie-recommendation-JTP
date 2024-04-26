@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 export default function Login() {
 
   const [passwordShow, setPasswordShow] = useState(false)
-  const [formData, setFormData] = useState({ username: "", password: "" })
+  const [formData, setFormData] = useState({ username: "test", password: "test" })
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState("")
   const navigate = useNavigate()
@@ -44,7 +44,8 @@ export default function Login() {
        
           <center>
             <p style={{fontSize: '2.25rem'}}>Movie Suggestions</p>
-            <span style={{fontSize:'1rem', display:'block'}}>Please provide credentials</span>
+            
+            <span style={{fontSize:'1rem', display:'block'}}>default credentials test : test</span>
             
             {error && <p style={{fontSize:'0.875rem', color:'#ef4444', marginTop:'1rem'}}>{error}</p>}
             <form

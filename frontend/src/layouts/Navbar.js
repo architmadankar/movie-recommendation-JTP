@@ -4,7 +4,7 @@ const Navbar = () => {
 
     return (
         
-            <div style= {{display: 'flex', flexDirection: 'column', backgroundColor: '#3b82f6', padding: '1rem', paddingTop: '1rem', paddingBottom: '1rem'}}>
+            <div style= {{display: 'flex', flexDirection: 'column', backgroundColor: 'black', padding: '1rem', paddingTop: '1rem', paddingBottom: '1rem'}}>
         
                 <div style={{display: 'flex', justifyContent:'space-between', alignItems: 'center' }}>
         

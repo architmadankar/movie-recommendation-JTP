@@ -1,6 +1,5 @@
 import React, { useState,useEffect } from 'react'
 import { getDropdowns, getMovies } from '../global/api';
-import HourglassBottomIcon from '@mui/icons-material/HourglassBottom';
 
 
 const Dashboard = () => {
@@ -36,10 +35,10 @@ const Dashboard = () => {
 
                 <div style={{marginBottom:'3rem', display: 'grid', placeItems:'center'}}>
             <p style={{fontSize:'1.5rem', paddingTop:'10px', paddingBottom:'10px'}}>Select a movie </p>
-            <select onChange={onOptionChangeHandler}
-            >
+            
+            <select onChange={onOptionChangeHandler}>
 
-                <option>Please choose one option</option>
+                <option>Choose One Movie From the database</option>
                 {options.map((option, index) => {
                     return <option key={index} >
                         {option.title}
@@ -47,18 +46,20 @@ const Dashboard = () => {
                 })}
             </select>
             {error && <p style={{fontSize:'0.875rem', color: 'ef4444', marginTop:'1rem'}}>{error}</p>}
-            {loading && <div style={{ display: 'grid', placeItems: 'center', padding: '1rem' }}><HourglassBottomIcon style={{ fontSize: "1rem" }} /></div>}
+            {loading && <div style={{ display: 'grid', placeItems: 'center', padding: '1rem' }}>
+                <p>Loading...</p>
+                </div>}
             </div>
             {rec.length>0
             &&
-            <p style={{fontSize: '1.5rem'}}>Recommendations:</p>
+            <p style={{fontSize: '1.5rem'}}>suggestions:</p>
             }
             {rec.map((item, idx) => {
                 return (
                     <div key={idx} style={{boxShadow:'0px 2px 4px rgba(0,0,0,0.1)',padding:'1rem', marginTop:'0.5rem', marginBottom:'0.5rem', borderRadius:'0.375rem', display:'flex', alignItems:'center',justifyContent: 'space-between'}}>
                         
                         <p>{item.title}</p>
-                        <p>{item.genres}</p>
+                        <p>{item.genre}</p>
                         
                     </div>
                 )
