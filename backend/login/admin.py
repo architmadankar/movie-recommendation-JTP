@@ -6,5 +6,10 @@ from django.contrib.auth.admin import UserAdmin
 class Admin(UserAdmin):
     readonly_fields = ('date_joined', 'last_login')
     list_display = ('username', 'last_login', 'is_admin')
+    search_fields = ()
+    filter_horizontal = ()
+    list_filter = ()
+    fieldsets = ()
+
     
 admin.site.register(Account, Admin)

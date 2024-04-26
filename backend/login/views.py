@@ -13,3 +13,4 @@ class UserView(APIView):
         user =  request.user
         userSerial = UserSerial(user)
         return Response(data= userSerial.data, status=200)
+
