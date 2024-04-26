@@ -7,12 +7,11 @@ from engine import recommend
 # Create your views here.
 
 class List(APIView):
-    classes = [IsAuthenticated]
-    def get(self):
+    permission_classes = [IsAuthenticated]
+    def get(self, request, *args, **kwargs):
         movies = Recommend.objects.all()
         serializer = Serializer(movies, many = True)
         return Response(status = 200, data = serializer.data)
-    
 class Suggest(APIView):
     classes = [IsAuthenticated]
     def post(self, request):
