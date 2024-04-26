@@ -1,7 +1,7 @@
 from recommend.models import *
 import csv
 def db(movie_id,title,genres):
-    m = Recommend.objects.create(id=movie_id,title=title,genres=genres)
+    m = Recommend.objects.create(id=movie_id,title=title,genre=genres)
     
 def get_data(csv_output):
     with open(csv_output,'r') as f:
