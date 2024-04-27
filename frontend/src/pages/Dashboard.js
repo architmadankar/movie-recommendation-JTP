@@ -36,15 +36,17 @@ const Dashboard = () => {
                 <div style={{marginBottom:'3rem', display: 'grid', placeItems:'center'}}>
             <p style={{fontSize:'1.5rem', paddingTop:'10px', paddingBottom:'10px'}}>Select a movie </p>
             
-            <select onChange={onOptionChangeHandler}>
 
-                <option>Choose One Movie From the database</option>
-                {options.map((option, index) => {
-                    return <option key={index} >
-                        {option.title}
-                    </option>
-                })}
-            </select>
+            <div style={{ height: '200px', overflow: 'auto' }}>
+                <select size={options.length + 1} onChange={onOptionChangeHandler}>
+                    {options.map((option, index) => {
+                        return <option key={index}>
+                    {option.title}
+                            </option>
+                                })}
+                </select>
+            </div>
+
             {error && <p style={{fontSize:'0.875rem', color: 'ef4444', marginTop:'1rem'}}>{error}</p>}
             {loading && <div style={{ display: 'grid', placeItems: 'center', padding: '1rem' }}>
                 <p>Loading...</p>
@@ -56,7 +58,7 @@ const Dashboard = () => {
             }
             {rec.map((item, idx) => {
                 return (
-                    <div key={idx} style={{boxShadow:'0px 2px 4px rgba(0,0,0,0.1)',padding:'1rem', marginTop:'0.5rem', marginBottom:'0.5rem', borderRadius:'0.375rem', display:'flex', alignItems:'center',justifyContent: 'space-between'}}>
+                    <div key={idx} style={{boxShadow:'2px 2px 4px rgba(0,0,0,0.1)',padding:'1rem', marginTop:'0.5rem', marginBottom:'0.5rem', borderRadius:'0.375rem', display:'flex', alignItems:'center',justifyContent: 'space-between'}}>
                         
                         <p>{item.title}</p>
                         <p>{item.genre}</p>
