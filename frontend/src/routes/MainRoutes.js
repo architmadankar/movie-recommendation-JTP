@@ -3,7 +3,6 @@ import React, { Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import ListOfRoutes from "../global/listOfRoutes"
 import DefaultLoader from "../components/loaders/DefaultLoader"
-import _ from "lodash"
 
 const MainLayout = () => {
     return (

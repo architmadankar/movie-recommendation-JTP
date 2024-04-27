@@ -6,3 +6,4 @@ djangorestframework
 numpy 
 pandas 
 scikit-learn
+django-cors-headers
