@@ -96,10 +96,10 @@ yarn start
 6.  Install libs and run Django Backend
 
    ```bash
-pip install -r requirements.txt
+	pip install -r requirements.txt
 ```
 ```bash
-python3 manage.py runserver
+	python3 manage.py runserver
 ```
 
 7.  Open the service in your browser:  [http://localhost:3000/](http://localhost:3000/)
@@ -124,11 +124,11 @@ python3 manage.py runserver
     ```
 4. Install and run the frontend application
 
-```bash
-yarn
+	```bash
+	yarn
+	```
 ```
-```
-yarn start
+	yarn start
 ```
 
 5. Run backend application
@@ -136,12 +136,11 @@ yarn start
    cd movie-recommendation-JTP/backend
    ```
 6.  Install libs and run Django Backend
-
-   ```bash
+ ```bash
 pip install -r requirements.txt
 ```
-```bash
-python manage.py runserver
+```
+	python manage.py runserver
 ```
 7.  Open the service in your browser:  [http://localhost:3000/](http://localhost:3000/)
 
@@ -153,6 +152,11 @@ python manage.py runserver
   username : test , password : test
   ```
 - Choose any one movie to get recommendations
+  
+- To find a movie use browser find command to search for movies
+  ```bash
+  CTRL + F
+  ```
 
 <h2>Project Screenshots:</h2>
 
@@ -164,4 +168,6 @@ python manage.py runserver
 
 <img src="https://github.com/architmadankar/movie-recommendation-JTP/blob/f34d62987f12f4a32a1e28932c2c2404e96f3f75/screenshots/dashboard.png" alt="project-screenshot">
 
+#### Working 
 
+<img src="https://github.com/architmadankar/movie-recommendation-JTP/blob/a0e2f0ab254055a11d450b46b6ef823c4160a99f/screenshots/working.png" alt="project-screenshot">
